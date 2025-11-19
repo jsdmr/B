@@ -1,0 +1,35 @@
+#random-line-plugin {
+    position: fixed;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%) translateY(200%);
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    padding: 1rem 1.5rem;
+    border-radius: 999px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+    pointer-events: none;
+    opacity: 0;
+    transition: transform 0.6s cubic-bezier(.68,-0.55,.27,1.55), opacity 0.6s ease;
+    font-size: 0.95rem;
+}
+
+#random-line-plugin.visible {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+#random-line-plugin .line {
+    font-weight: 600;
+}
+
+#random-line-plugin .source {
+    font-size: 0.75rem;
+    color: #f6d7a7;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
